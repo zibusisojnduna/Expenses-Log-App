@@ -47,9 +47,17 @@ button{
   background-color: white;
   width: 500px;
   height: 50px; 
+  margin-top: 4px;
 }
 
 .list-item h6{
   padding-top: 25px;
   padding-left: 12px;
+}
+
+.expenseIndicator{
+  display: block;
+  border-right: 4px solid red;
+  width: 100px;
+  height: 47px;
 }

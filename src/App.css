@@ -40,3 +40,16 @@ button{
   margin-left: 45px;
   margin-top: 4px;
 }
+
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 500px;
+  height: 50px; 
+}
+
+.list-item h6{
+  padding-top: 25px;
+  padding-left: 12px;
+}

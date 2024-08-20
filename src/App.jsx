@@ -7,6 +7,8 @@ import DisplayTransaction from './components/displayTransaction'
 import Home from './components/home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/login'
+import Layout from './pages/layout'
+import SignUp from './components/signup'
 
 function App() {
   const [transaction, setTransaction] = useState([])
@@ -21,10 +23,11 @@ console.log(transaction)
     <BrowserRouter>
       <div className='container'>
       <Routes>
-        <Route path='/' element={<Login/>}>
-        <Route path='./home' element={<Home add={add} transaction={transaction}/>}>
-        </Route>
-        </Route>
+        <Route index element={<Login/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path="/home" element={<Home AddTransaction={AddTransaction} transaction={transaction}/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        
       </Routes>
       </div>
     </BrowserRouter>

@@ -1,8 +1,10 @@
-import {Outlet, Link} from 'react-router-dom'
+import { Outlet, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import React from "react"
 
 function Login(){
 
-
+const navigate = useNavigate()
 
     
 
@@ -10,7 +12,10 @@ function Login(){
         <div>
             <h1>Login Page</h1>
 
-            <button>Go to home page.</button>
+            <button onClick={() => navigate("/home")}>Go to home page.</button>
+
+            <h2>Don't have an account? Sign Up!</h2>
+            <button onClick={() => navigate("/signup")}>Sign Up</button>
         </div>
     )
 }

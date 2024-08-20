@@ -5,7 +5,7 @@ import './App.css'
 import AddTransaction from './components/add'
 import DisplayTransaction from './components/displayTransaction'
 import Home from './components/home'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/login'
 
 function App() {
@@ -18,20 +18,16 @@ function App() {
 console.log(transaction)
 
   return (
-    
+    <BrowserRouter>
       <div className='container'>
-        
-          
-
-         
-            <Home add={add} transaction={transaction}/>
-          
-      
-     
-    </div>
-
-    
-   
+      <Routes>
+        <Route path='/' element={<Login/>}>
+        <Route path='./home' element={<Home add={add} transaction={transaction}/>}>
+        </Route>
+        </Route>
+      </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
